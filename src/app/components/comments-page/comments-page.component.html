@@ -1,0 +1,44 @@
+<div class="container">
+
+<h2>Comments</h2>
+<p>
+    Hi All,<br><br>
+    Please insert detailes and comment text to improve or insert rubrique to menu.<br><br> 
+    Thanks Regards, Lior
+</p>
+
+<div class="Container">
+    <form #FormInfo="ngForm">
+
+Name * 
+<input type="text" class="Name" name="name" [(ngModel)]="NewComment.name"
+required #nameInfo="ngModel">
+WWid * 
+<input type="text" class="WWid" name="wwid" [(ngModel)]="NewComment.wwId"
+required #WWIDInfo="ngModel">
+<br>
+<br>
+Subject
+<select [(ngModel)]="selectedValue" name="ShowSubject" required #SubjectInfo="ngModel">
+    <option *ngFor="let i of SubjectsArray" [ngValue]="i">{{i}}</option>
+</select>
+<br>
+<br>
+<textarea class="Add_Comment" name="comment"  [(ngModel)]="NewComment.comment"
+required #CommentInfo="ngModel"></textarea>
+    <br>
+    <button (click)="Reset(CommentInfo.value)" class="reset">Reset</button>
+    <br>
+<div class="buttons">
+    <input type="submit" [disabled]="FormInfo.form.invalid" value="Send" class="butSend" (click)="Send()">
+    <input type="button" value="Cancel" class="cancelation" class="but" (click)="Cancel()">
+</div>
+</form>
+
+<div *ngIf="IfMessageSend" class="ShowMessageSend" >
+Thanks messaage send Secsussfully
+<button value="X" class="Ok" (click)="HideMessage()"></button>
+</div>
+</div>
+</div>
+

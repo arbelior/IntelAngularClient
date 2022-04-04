@@ -1,0 +1,60 @@
+.Container
+{
+    height: 100%;
+    width: 100%;
+    display: grid;
+
+}
+
+.Marquee
+{
+    height: 30%;
+    padding: 2px;
+    width: 100%;
+}
+
+.H1_Img
+{
+ display: block;
+  height: 60%;
+  width: 100%;
+}
+
+.ImgSize
+{
+    position: absolute;
+    left: 6%;
+    bottom: 85%;   
+}
+
+.H1
+{
+   margin-left: 48%;
+}
+
+marquee{
+    color: maroon;
+    font-weight: bold;
+    font-size: x-large;
+}
+
+h1
+{
+    color: darkcyan;
+    font-style: italic;
+    margin:0;
+    font-size: xxx-large;
+}
+
+
+@media only screen and (min-width:1700px) 
+{
+ 
+
+     /* h1
+     {
+        margin-left: 18%;
+     } */
+}
+
+

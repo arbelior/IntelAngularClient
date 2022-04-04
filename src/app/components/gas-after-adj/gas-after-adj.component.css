@@ -1,0 +1,199 @@
+/* .table
+{
+    height: 50%;
+    display: block;
+
+}
+
+table{
+    margin: auto;
+    font-style: normal;
+    font-size: medium;
+}
+
+table,th,td{
+    border: 1px solid blue;
+    font-style: normal;
+   
+}
+
+td:first-child{
+    text-align: left;
+    width: 80px;
+}
+
+td,th{
+    padding: 8px;
+    text-align: center;
+}
+
+tr :nth-of-type(even)
+{
+   background-color: lightgreen;
+}
+
+tr :nth-of-type(odd)
+{
+   background-color: lightcoral;
+} */
+h2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.AC{
+    width: 90%;
+    height: 17px;
+    font-weight: bold;
+}
+
+.AcResult{
+    width:150px ;
+}
+
+.status{
+    width: 200px;
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    
+}
+
+.content{
+    height: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+     margin-top: 7%; 
+}
+
+.buttons
+{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    display: block;
+    padding: 2px;
+}
+
+.FILTER
+{
+    font-size:medium;
+    padding-left: 5px;
+    padding-right: 5px; 
+}
+
+.Save{
+    padding-left: 5px;
+    padding-right: 5px; 
+    font-size: medium;
+     margin-left: 2px; 
+}
+
+.back_button
+{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+.Back{
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    font-size:medium;
+}
+
+span{
+    font-size: small;
+}
+
+.deviaition
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 5px;
+    top: -5%;
+    left: 20%;
+
+}
+
+.but_dev
+{
+    text-align: center;
+    font-weight: bold;
+    background-color:lightblue;
+    margin-bottom: 2px;
+    margin-top: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 13px;
+    padding-right: 13px;
+}
+
+@media only screen and (min-width:1700px) 
+{
+    .buttons
+    {
+        margin-top: 4.2%;
+    }
+
+    .deviaition{
+        left: 36%;
+    }
+
+    .save
+    {
+        margin-top: 29px;    
+        margin-left: -45px; 
+    }
+}
+
+.IfPass
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lightgrey;
+    top: -5%;
+    left: 37%;
+    padding: 3px 5px;
+}
+
+.save
+{
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    background-color: burlywood;
+    padding: 2px 3px;
+    border: solid 1px black;
+    margin-left: 2px;
+    bottom: 2px; 
+}
+
+.IfOkToSave
+{
+    margin-top: 10px;
+    margin-left: 46px;
+}
+
+.IfCancel
+{
+    margin-left: 35%;
+}
+
+.TaskProp
+{
+    margin-top: 2px;
+    margin-left: 8px;
+}

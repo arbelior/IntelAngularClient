@@ -1,0 +1,72 @@
+<div class="table">
+    <h2>GAS After Adjust</h2>
+    <table>
+       <thead>
+           <th>Gas-Line</th>
+           <th>Gas-Name</th>
+           <th class="AcResult">AC</th>
+           <th>Status</th>
+       </thead>
+       
+       <tbody>
+
+       <tr *ngFor="let i of Gaslist_Failed_AfterAdj">       
+        <td>{{i.gasline}}</td>
+        <td>{{i.gasname}}</td>
+            <td> 
+                <input type="number" class="AC"  placeholder="Enter Ac Result..." (input)="CheckIf_AC_define($event)"
+                 (input)="checkValueAC($event, i.gasname)"
+                >
+            </td>                      
+        <td class="status" id="statusChange" name="item">{{i.status}}</td>
+       </tr>
+
+    </tbody>
+
+    </table>   
+</div> 
+
+
+ <div class="content">
+    <h2>Select Gas and Enter AC Result</h2>
+    'FILTER' to get list failed Ac <br />
+    'SAVE' to continue later this step<br />
+    'BACK' to return
+</div>
+
+ <div class="buttons">
+    <button class="FILTER" (click)="Filter()">FILTER</button>
+    <button class="Save" (click)="Save()">SAVE</button>
+    <div *ngIf="IfSave" class="save">
+        <form #formInfo = "ngForm">
+            Name
+            <input type="text" class="NameProp" name="name" [(ngModel)]="ResumeToTask.name"
+            required #nameInfo="ngModel">
+            <br>
+            Task
+            <input type="text" class="TaskProp" name="task" [(ngModel)]="ResumeToTask.task"
+            required #taskInfo="ngModel">
+            <br>
+            <input type="button" value="OK" class="IfOkToSave" [disabled]="formInfo.form.invalid" (click)="ToSave()" >
+            <input type="button" value="Cancel" class="IfCancel" (click)="ToCancel()">
+        </form>
+     </div>
+     <div class="back_button">
+    <button class="Back" (click)="Return_Back()">BACK</button>
+</div>
+
+</div> 
+
+<div *ngIf="AlertIfdeviation" class="deviaition">
+                        Stop Work!!!
+Please Follow up on the table there is Gas status on: "deviation update ENG"
+<br>
+<input type="button" value="OK" (click)="To_hide()" class="but_dev">
+</div>
+
+<div *ngIf="IfAllPassed" class="IfPass">
+          Good job!!!
+    All the Gases are passed<br>
+    <input type="button" value="OK" (click)="ToAddNewTask()" class="but_dev">
+</div>
+

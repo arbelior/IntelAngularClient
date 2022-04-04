@@ -1,0 +1,61 @@
+<div class="table">
+    <h2>GAS  LIST</h2>
+    <table>
+       <thead>
+           <th>GAS Name</th>
+           <th>Gas-Line</th>
+           <th>Old AI/o</th>
+           <th class="AcResult">NEW AI/o</th>
+       </thead>
+         
+       <tbody>
+      
+       <tr *ngFor="let i of GasFailed_List">
+        <td>{{i.gasname}}</td>
+        <td>{{i.gasline}}</td>
+        <td (mouseenter)="Check_oldAIO()"><input type="number" (input)="CheckIfNoFill($event, i.gasname)" (change)="Calc_NewAio($event, i.gasname)"></td>                      
+        <td>{{i.NewAio | number: '1.0-3'}}</td> 
+       </tr>
+ 
+    </tbody>
+
+    </table>   
+</div> 
+
+
+
+  <div class="content">
+    <h2>Please Enter Old AI/O</h2>
+    'NEXT' to Enter new AC Result <br/>
+    'SAVE' to continue later this step<br />
+    'BACK' to return
+</div>
+
+<div class="buttons">
+  <input  type="button" class="NEXT" value="NEXT"  (click)="Next()">
+  <input type="button" class="SAVE" value="SAVE"  (click)="Save()">
+
+<div *ngIf="IfSave" class="save">
+
+    <form #formInfo = "ngForm">
+        Name
+        <input type="text" class="NameProp" name="name" [(ngModel)]="ResumeToTask.name"
+        required #nameInfo="ngModel">
+        <br>
+        Task
+        <input type="text" class="TaskProp" name="task" [(ngModel)]="ResumeToTask.task"
+        required #taskInfo="ngModel">
+        <br>
+        <input type="button" value="OK" class="IfOkToSave" [disabled]="formInfo.form.invalid" (click)="ToSave()" >
+        <input type="button" value="Cancel" class="IfCancel" (click)="ToCancel()">
+    </form>
+</div>
+<div class="back_button">
+<button class="Back" (click)="Return_Back()">BACK</button>
+</div>
+</div>
+
+<div *ngIf="IsMouseEnter" class="If_MouseEnter">
+    Please  Verify  Analog Input is equal to Analog Output<br>
+    <input type="button" value="Submit" class="submit" (click)="ToHideMouseEnterAlarm()"> 
+</div>

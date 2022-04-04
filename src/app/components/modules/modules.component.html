@@ -1,0 +1,65 @@
+<div class="Module_Container">
+
+<div class="Module_Tools">
+    <div class="labelContainer">
+        <h2>Modules</h2>
+        <label class="labelItem" *ngFor="let i of modules">
+            <input name="module" type="radio" (click)="GetToolsPerModules(i.module)" [(ngModel)]="Module_Value" class="Moduleslabel" value="{{i.module}}">
+            {{i.module}}
+            <br><br>
+        </label>
+    </div>
+    
+    <div class="ToolsArea">
+        <h2>Tools</h2>
+     <select [(ngModel)]="selectedValue" class="mod">
+         <option *ngFor="let i of ToolsPer_mod" [ngValue]="i.tool">{{i.tool}}</option>
+     </select>
+    </div>
+        <img src="/assets/images/MODULE.jpg" width="400" height="330">
+ </div>
+
+
+<div class="content">
+    <!-- <p>"NEXT" : </p> To continue to Get data of Module <br>
+    <p>"SAVE" : </p> To save data and return from the same page later <br>
+    <p>"BACK" : </p>To return the last page <br> -->
+
+    <p> <strong>"NEXT" :</strong>  To continue to Get data of Module </p>
+    <p> <strong>"SAVE" :</strong>  To save data and return to the same page later </p>
+    <p> <strong>"BACK" :</strong>  To return the last page </p>
+</div>
+
+
+<div class="buttonx">
+<input type="button" value="NEXT" class="NEXT" (click)="Next()">
+<input type="button" value="SAVE" class="SAVE" (click)="Save()">
+<div *ngIf="IfSave" class="save">
+    <form #formInfo = "ngForm">
+        Name
+        <input type="text" class="NameProp" name="name" [(ngModel)]="ResumeToTask.name"
+        required #nameInfo="ngModel">
+        <br>
+        Task
+        <input type="text" class="TaskProp" name="task" [(ngModel)]="ResumeToTask.task"
+        required #taskInfo="ngModel">
+        <br>
+        <input type="button" value="OK" class="IfOkToSave" [disabled]="formInfo.form.invalid" (click)="ToSave()" >
+        <input type="button" value="Cancel" class="IfCancel" (click)="ToCancel()">
+    </form>
+ </div>
+ <div class="back_button">
+    <input type="button" value="BACK" class="BACK" (click)="Return()">
+ </div>
+</div> 
+
+<div *ngIf="ShowAlarm" class="ShowAlarm">
+            Please choose Module and Tool and than press NEXT<br>
+    <input type="button" class="OkToAlarm" value="Submit" (click)="OkToAlarmMessage()">
+</div>
+</div>
+
+
+
+
+     

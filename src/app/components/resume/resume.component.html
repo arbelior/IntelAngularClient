@@ -1,0 +1,40 @@
+<div class="container">
+<h2>Resume</h2>
+<div class="table_class">
+    <table>
+        <thead>
+                <th>Name</th>
+                <th>Task</th>
+                <th>Time</th>
+                <th>Linq</th>
+                <th>Delete</th>
+        </thead>
+       
+        <tbody>
+            <tr *ngFor="let i of ShowTaskListAray">
+                <td>{{i.name}}</td>
+                <td>{{i.task}}</td>
+                <td>{{i.date | time}}</td>
+                <td class="detailes_td">
+                    <a routerLink={{i.router}} routerLinkActive="active">{{i.router}}</a>
+                </td>
+                <td>
+                   <a> 
+                    <img src="/assets/images/deletecircleicon.jpg" width="50" height="30" class="icon" (click)="deleteItem(i.id, i.name)">
+                   </a> 
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+    <div *ngIf="Isdelete" class="deleteAlarm">
+        Hi {{ActiveUser}} this task uploaded by {{ContactNameTodelete}} are you sure you want to delete it<br>
+            <input type="button" class="OkToAlarm" value="Submit" (click)="OkTodeleteMessage()">
+            <input type="button" class="CanceldeleteOption" value="Cancel" (click)="Canceldelete()">   
+    </div>
+</div>
+
+
+

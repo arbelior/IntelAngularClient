@@ -1,0 +1,33 @@
+h2{
+    font-size: x-large;  
+   }
+   
+   img{
+     
+       text-align: center;
+   }
+
+   p{
+       font-weight: bold;
+       font-size: x-large;
+   }
+   
+   .HomeDesign{
+       text-align: center;
+       height: 100%;
+   }
+   
+   .P{
+       margin-top: 30px;
+   }
+
+   @media only screen and (min-width:1700px) 
+{
+    img{
+        width:400px;
+        height:370px;
+    }
+}
+   
+   
+   

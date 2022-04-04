@@ -1,0 +1,84 @@
+<div class="AllContent">
+
+    <div class="content">
+        <h2>Task List</h2>
+    
+        <ul class="menuItems">
+           
+            <li>
+                <a routerLink="/GAS-Adj" routerLinkActive="active">GAS-Adj</a>
+            </li>
+            <li>
+                <a routerLink="/Macro" routerLinkActive="active">Macro</a>
+            </li>
+            <li>
+                <a routerLink="/PM" routerLinkActive="active">PM</a>
+            </li>
+            <li>
+                <a routerLink="/Home" routerLinkActive="active" name="ccc" (click)="AcceseeArea(1)">CCC</a>
+            </li>
+
+             <li>
+                <a routerLink="/UpdateData" routerLinkActive="active">Add-Task</a>
+            </li> 
+            <li>
+                <a routerLink="/RESUME" routerLinkActive="active">Resume</a>
+            </li>
+            <li>
+                <a routerLink="/Comments" routerLinkActive="active">Comments</a>
+            </li>
+            <li>
+                <a routerLink="/Home" routerLinkActive="active" name="tasklist"  (click)="AcceseeArea(0)">Task List</a>
+            </li>
+            <li>
+                <a *ngIf="checkIfLogin()" routerLink={{ActiveUrl}} routerLinkActive="active" name="login"  (click)="AcceseeArea(3)">Login</a>
+            </li>
+            <li>
+                <a *ngIf="CheckIfuserLogin" routerLink={{ActiveUrl}} routerLinkActive="active" name="logout"(click)="logout()">Logout</a>
+            </li>
+            <li>
+                <a *ngIf="IfRole" routerLink="/TO_Add_User" routerLinkActive="active" name="Adduser">Register</a>
+            </li>
+           
+        </ul>
+
+        <div *ngIf="IsAccess" class="Accesss">
+            <form #formInfo="ngForm">
+                <input type="text" name="name" placeholder="WW ID..." [(ngModel)]="creditionals.username" class="userName"
+                required #NameInfo="ngModel">
+                <br>
+                <input type="password" name="Userpass" placeholder="Password..." [(ngModel)]="creditionals.password" class="userPass"
+                required #PassInfo="ngModel" id="pass" (input)="CheckIfStart($event)"> 
+                <img *ngIf="ToShowPass" class="Show" (click)="ShowPass()" src="/assets/images/showPass.jpg" width="25" height="25" class="icon">
+                <img *ngIf="ToHidePass" class="Show" (click)="HidePass()" src="/assets/images/HidePass.jpg" width="25" height="25" class="icon">
+                                      
+                    <span *ngIf="IsFailed_UserPass" class="Uncoreect_pass">Password UnCorrect</span>
+                    <span *ngIf="IsFailed_UserId" class="Uncorrcect_user">User is Uncorrect</span>
+                    <span *ngIf="NameInfo.invalid && NameInfo.touched" class="detailes"></span>
+                    
+             <div class="LoginOrCancel">
+                <button [disabled]="formInfo.form.invalid" class="Logged" (click)="login()">Sign in</button>
+                <button (click)="cancel()" class="cancel">Canecl</button>
+             </div>      
+                <hr>
+                <div class="buttonWrapper">
+                    <button class="ForgetPass">Forgot Password</button>
+                </div>
+            </form>
+        </div>    
+
+    </div>          
+           <div *ngIf="IfUnauthorized" class="UnAuthorized">
+            You are not Authorized, Please insert User and Pasword again <br>
+            <input type="button" value="OK" class="OkToUnAuthorized" (click)="Hide_Alarm_Authorized()">
+           </div>
+           
+           <div *ngIf="IfUserIsActive" class="AlarmIf_UserIsActive">
+               this User is already take, Please try again
+                <input type="button" value="X" class="x"> 
+           </div>
+</div>
+
+
+
+

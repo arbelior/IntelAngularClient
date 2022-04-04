@@ -1,0 +1,14 @@
+div{
+    height: 5%; 
+   color: linen;
+   padding: 10px;   
+   display: block;
+   margin-left: 52%;
+}
+
+@media only screen and (min-width:1700px) 
+{
+    div{
+        margin-left: 55%;
+    }
+}

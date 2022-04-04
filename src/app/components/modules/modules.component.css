@@ -1,0 +1,188 @@
+.Module_Container
+{
+    height: 100%;
+    width: 100%;
+}
+
+.labelContainer
+{
+    display: inline-block;
+}
+
+.ToolsArea
+{
+    margin-left: 50px;
+    float: right;
+    margin-right: 80%;
+
+}
+
+.Module_Tools
+{
+    display: inline block;
+    margin-left: 5px;
+}
+
+ .mod:hover
+{
+    cursor: pointer;
+    /* font-size: 14px; */
+} 
+
+img
+{
+    position: absolute;
+    top: 2%;
+    left: 35%;
+}
+
+
+
+.buttonx
+{
+     width: 100%;
+     position: absolute; 
+     bottom: 0%; 
+     display: block;
+     padding: 2px;  
+}
+
+
+
+
+@media only screen and (min-width:1700px) 
+{
+    /* .buttonx
+    {
+        /* margin-top: 26.5%; 
+    } */
+     .save
+    {
+     margin-top: 28px;    
+     margin-left: -30px; 
+    } 
+    .ShowAlarm
+    {
+        margin-left: 4.5%;
+    }
+
+     img
+    {
+        width: 500px;
+        height: 500px;
+    }
+    
+   
+
+.content
+{
+         margin-top: 4%;
+         margin-left: 6%; 
+}
+
+
+} 
+
+.BACK
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    font-size:medium;
+    float: right;
+    
+}
+.back_button
+{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+.SAVE
+{
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size:medium;
+    margin-left: 2px;
+   
+
+}
+
+.NEXT
+{  
+    padding-right: 5px;
+    padding-left: 5px;
+    font-size: medium;
+}
+
+.content
+{
+    position: absolute;
+     text-align: center;
+     left: 35%;
+     top: 70%;
+ 
+    
+}
+
+strong
+{
+    font-weight: bold;
+}
+
+
+
+
+
+.TaskProp
+{
+    margin-top: 2px;
+    margin-left: 8px;
+}
+
+.save{
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    background-color: burlywood;
+    padding-top: 2px;
+    padding-right: 3px; 
+    padding-left: 3px; 
+    padding-bottom: 2px;  
+    border: solid 1px black;
+    margin-left: 2px;
+     bottom: 2px; 
+}
+.IfOkToSave
+{
+    margin-top: 10px;
+    margin-left: 46px;
+}
+
+.IfCancel
+{
+    margin-left: 35%;
+}
+
+.ShowAlarm
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 5px;
+    top: -5%;
+    left: 32%; 
+  
+}
+
+.OkToAlarm
+{
+    margin-top: 7px;
+    background-color: lightblue;
+    font-size: 18px;
+    font-weight: bold;
+}

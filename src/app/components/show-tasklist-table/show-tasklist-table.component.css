@@ -1,0 +1,131 @@
+.UnAuthorized
+{
+    position: absolute;
+    border: solid black 1px;
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: left;
+    color: red;
+    background-color: lightgrey;  
+    top: 84%;
+    right: 11.3%;
+    height: 13%;
+    padding: 0px 6px;
+    padding-top: 4px;
+}
+
+table{
+    margin: auto;
+    font-style: normal;
+    font-size: x-large;
+
+}
+
+img:hover
+{
+    cursor: pointer;
+    width:55px;
+    height:35px;
+}
+
+table,th,td{
+    border: 1px solid blue;
+    font-style: normal;  
+}
+
+th{
+    background-color: lightgrey;
+}
+
+td:first-child{
+     text-align: left; 
+}
+
+
+td,th{
+    padding: 6px;
+    text-align: center;
+}
+
+div thead th
+{
+    position: sticky;
+    top: 0px;
+}
+
+tr :nth-of-type(even)
+{
+   background-color: lightgreen;
+}
+
+tr :nth-of-type(odd)
+{
+   background-color: lightcoral;
+}
+
+ h2
+{
+    text-align: center;
+    position: sticky;
+    left: 0%;
+    display: inline-block;
+    background-color: bisque;
+}
+.container
+{
+    text-align: center;
+}
+
+.Button_To_Logout
+{
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.Button_To_Logout:hover
+{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+
+
+span
+{
+    position: absolute;
+    right: 5%;
+    top: 2%
+}
+
+.Button_To_Logout
+{
+    font-size: large;
+    font-weight: bold;
+}
+
+div
+ {
+     height: 84%;    
+      display: block;
+      overflow-y: auto; 
+}
+
+
+@media only screen and (max-width:1500px) 
+{
+    .UnAuthorized
+    {
+        font-size: x-large;
+        text-align: left;
+        color: red;
+        background-color: lightgrey;  
+        top: 85%;
+        right: 2%;
+        height: 13%;
+        padding: 0px 6px;
+        padding-top: 4px;
+    }
+}
+
+

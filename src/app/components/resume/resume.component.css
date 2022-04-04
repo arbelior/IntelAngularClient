@@ -1,0 +1,153 @@
+table{
+    margin: auto;
+    font-style: normal;
+    font-size: x-large;
+}
+
+table,th,td
+{
+    border: 1px solid blue;
+    font-style: normal;   
+}
+
+th
+{
+    background-color: lightgrey;
+}
+
+td
+{
+    font-size: large;
+    font-weight: bold;
+}
+
+td:first-child{
+    text-align: left;
+    width: 80px;
+}
+
+/* td:last-child
+{
+    width: 150px;
+    text-align: center;
+} */
+
+.detailes_td
+{
+    width: 150px;
+    text-align: center;
+}
+
+.detailes_td :hover
+{
+  background-color: aliceblue;
+}
+
+td,th{
+    padding: 8px;
+}
+
+img
+{
+    margin-left: 10px;
+}
+
+img:hover
+{
+    cursor: pointer;
+    width:55px;
+    height:35px;
+}
+
+div thead th
+{
+    position: sticky;
+    top: 0px;
+}
+
+tr :nth-of-type(even)
+{
+   background-color: lightgreen;
+}
+
+tr :nth-of-type(odd)
+{
+   background-color: lightcoral;
+}
+h2{
+    margin-top: 10px;
+    font-size:xx-large;
+    font-weight: bold;
+    /* margin-left: 49%; */
+}
+
+.active
+{
+    background-color: wheat;
+    font-weight: bold;
+}
+
+.table_class
+{     
+      height: 84%; 
+      display: inline-block;
+      overflow-y: auto;
+}
+
+thead
+{
+    position: sticky;
+    top: 0%;
+}
+
+
+.container
+{
+    width: 100%;
+    text-align: center;
+}
+
+@media only screen and (min-width:1357.27px) 
+{
+    table
+    {
+        width: 600px;
+    }
+}
+
+.deleteAlarm
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 3px;
+    bottom: 7%;
+    left: 25%; 
+}
+
+/* .delete_buttons
+{
+    margin-top: 5px;
+} */
+
+
+.OkToAlarm
+{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 7px;
+    background-color: lightblue;
+}
+
+.CanceldeleteOption
+{
+    font-size: 18px;
+    margin-left: 2px;
+    background-color: lightblue;
+    font-weight: bold;
+}
+
+

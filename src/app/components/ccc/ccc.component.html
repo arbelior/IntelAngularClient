@@ -1,0 +1,57 @@
+ <div class="Container">
+
+     <div class="Header">
+         <h3>Welcome {{ShowUser}}</h3>
+        <h2>Chat CCC</h2>
+        <button  class="logout" (click)="LogOut()">LOGOUT</button>
+    </div>    
+    
+           <div class="main">
+            <div class="ShowMessage">
+
+                <table class="MessageTable">
+                    <thead>
+                        <th class="thstuck">User Name</th>
+                        <th class="thstuck">Message</th>
+                        <th class="thstuck">Time</th>
+                        <th class="thstuck">Shift</th>
+                        <th class="thstuck">Date</th>       
+                    </thead>
+                    <tbody>
+                    <tr *ngFor="let i of AllMessages">
+                           <td>{{i.name}}</td>
+                           <td>{{i.message}}</td>
+                           <td>{{i.date | time}}</td>
+                           <td>{{i.shift}}</td>
+                           <td>{{i.date | date}}</td>
+                    </tr>
+                </tbody>              
+                </table>
+    
+                </div>
+    
+             <div class="Contact">
+                 <table class="In_Contact">
+                     <thead>
+                        <th class="td_con">Contacts</th>
+                     </thead>
+                     <tbody>
+                         <tr *ngFor="let i of ShowContact">
+                             <td class="td_con">{{i.name}}</td>
+                         </tr>
+                     </tbody>
+                 </table>             
+            </div>
+           </div>
+           
+
+    <div class="SendMessageArea">
+        <span *ngIf="IfType" class="Showtyping">{{ShowIfUsertypeNow}} type...</span>           
+        <hr>
+        <textarea  class="textArea" [(ngModel)]="sendMessage"
+        required #textInfo ="ngModel" (input)="UserTypeFun($event)"></textarea>
+        <div class="buttonelement">
+            <button [disabled]="textInfo.invalid" (click)="SendMessgae()">Send</button>
+        </div> 
+</div> 
+ </div>

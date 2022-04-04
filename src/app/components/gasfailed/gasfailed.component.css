@@ -1,0 +1,124 @@
+h2{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.If_MouseEnter
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 5px;
+    top: -5%;
+    left: 32%;  
+}
+
+.submit
+{
+    margin-top: 7px;
+    background-color: lightblue;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.AcResult{
+    width:150px ;
+}
+
+.content{
+    height: 20%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.buttons{
+    width: 100%;
+    position: absolute; 
+    bottom: 0%; 
+    display: block;
+    padding: 2px;
+    
+}
+
+.NEXT{
+    font-size:medium;
+    padding-left: 5px;
+    padding-right: 5px;    
+  
+}
+
+.SAVE{
+    padding-left: 5px;
+    padding-right: 5px; 
+    font-size: medium;
+    margin-left: 2px;
+}
+
+.Back{
+    
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    font-size:medium;
+}
+
+.back_button
+{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+span
+{
+    font-size: small;
+}
+
+
+@media only screen and (min-width:1700px) 
+{
+    .buttons
+    {
+        margin-top: 4.2%;
+    }
+    .If_MouseEnter
+    {
+        left: 45%;
+    }
+}
+
+.TaskProp
+{
+    margin-top: 2px;
+    margin-left: 8px;
+
+}
+
+.save
+{
+    position: absolute;
+     display: inline-block; 
+    font-weight: bold;
+    background-color: burlywood;
+    padding: 2px 3px;
+    border: solid 1px black;
+    margin-left: 2px;
+    bottom: 2px; 
+}
+
+.IfOkToSave
+{
+    margin-top: 10px;
+    margin-left: 46px;
+}
+
+.IfCancel
+{
+    margin-left: 35%;
+}

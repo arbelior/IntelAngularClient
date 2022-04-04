@@ -1,0 +1,113 @@
+/* You can add global styles to this file, and also import other style files */
+
+button:hover
+{
+  cursor: pointer;
+}
+.table
+{
+    height: 50%;
+    display: block;
+}
+
+ th
+{
+ background-color: lightgrey;
+ text-align: center;
+}
+
+table
+{
+    margin: auto;
+    font-style: normal;
+    font-size: medium;
+}
+
+th,td
+{
+     border: 1px solid blue; 
+     font-style: normal; 
+}
+
+td:first-child
+{
+    text-align: left;
+    width: 80px;
+}
+
+td,th
+{
+    padding: 8px;
+    text-align: center;
+}
+
+
+
+tr :nth-of-type(even)
+{
+   background-color: lightgreen;
+}
+
+tr :nth-of-type(odd)
+{
+   background-color: lightcoral;
+}
+
+    body { 
+        margin: 0; 
+        font-family: Roboto, "Helvetica Neue", sans-serif; 
+        
+    
+    }  
+
+    html, body{
+        background-color: lightblue;
+        height: 100%;
+    }
+    a{
+        text-decoration: none;
+        color: black;
+
+    }
+
+    .IF_Passed
+{
+    color: black;
+}
+
+.IF_Failed
+{
+    color: red;
+    font-weight: bold;
+}
+
+.NEXT:hover
+{
+  cursor: pointer;
+}
+
+.SAVE:hover
+{
+    cursor: pointer;
+}
+
+.BACK
+{
+    cursor: pointer;
+}
+
+.submit
+{
+    cursor: pointer;
+}
+
+
+
+
+
+    
+
+
+
+
+ 

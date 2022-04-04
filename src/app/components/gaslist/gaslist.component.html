@@ -1,0 +1,84 @@
+<div class="Container">
+
+<div class="table">
+    <h2>GAS  LIST</h2>
+
+   <table>
+     <thead>
+            <th>Select</th>
+            <th>Gas-Line</th>
+            <th>Gas-Name</th>
+            <th class="AcResult">AC</th>
+            <th>Status</th>
+     </thead>       
+     <tbody>
+           <tr *ngFor="let i of GasListModel">
+                <td><input
+                   type="checkbox"
+                   class="des-check"
+                   [value]="i.gasline"
+                  (change)="checkBox($event)" >
+                </td>
+                <td>{{i.gasline}}</td>
+                <td>{{i.gasname}}</td>
+                <td> 
+                     <input type="number" *ngIf="i.Select"  class="AC"  placeholder="Enter Ac Result..."  (input)="checkValueAC($event, i.gasname)"
+                     (input)="checkIfInvalid($event)">
+                </td>                       
+                <td class="status">
+               <output [ngClass]="i.status == 'Failed' ? 'IF_Failed' : 'IF_Passed' "> {{i.status}} </output> 
+               </td>
+            </tr>
+      </tbody>    
+     </table>  
+
+<div *ngIf="divOpen">
+
+    <div *ngIf="AlertIfdeviation" class="deviaition">
+                            Stop Work!!!
+Please Follow up on the table there is Gas status on: "deviation update ENG"
+<br>
+<input type="button" value="OK" (click)="To_hide()" class="but_dev">
+</div>
+
+</div> 
+
+<div *ngIf="AlertIfAllPassed" class="IfPass">
+                   All Gases Are in Limits Not Need Adjust
+<input type="button" value="&#10003;" class="but_dev" (click)="To_hideIFpassed()">
+</div>
+
+</div>
+
+ <div class="content">
+    <h2>Select Gas and Enter AC Result</h2>
+    'FILTER' to get list failed Ac <br />
+    'SAVE' to continue later this step<br />
+    'BACK' to return
+</div>
+
+<div class="buttons">
+    <button class="FILTER" [disabled]="" (click)="Filter()">FILTER</button>
+    <input type="button" value="SAVE" class="SAVE" (click)="Save()">
+    <div *ngIf="IfSave" class="save">
+        <form #formInfo = "ngForm">
+            Name
+            <input type="text" class="NameProp" name="name" [(ngModel)]="ResumeToTask.name"
+            required #nameInfo="ngModel">
+            <br>
+            Task
+            <input type="text" class="TaskProp" name="task" [(ngModel)]="ResumeToTask.task"
+            required #taskInfo="ngModel">
+            <br>
+            <input type="button" value="OK" class="IfOkToSave" [disabled]="formInfo.form.invalid" (click)="ToSave()" >
+            <input type="button" value="Cancel" class="IfCancel" (click)="ToCancel()">
+        </form>
+     </div>
+     <div class="back_button">
+     <button class="Back" (click)="Return_Back()">BACK</button>
+    </div>
+</div>
+</div>
+
+
+

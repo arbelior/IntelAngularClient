@@ -1,0 +1,386 @@
+.Container
+{
+    width: 100%;
+    height: 100%;
+}
+
+.saveTorqueData
+{
+     position: absolute;   
+    font-weight: bold;
+    background-color: burlywood;
+    padding: 2px 3px; 
+    border: solid 1px black;
+    text-align: left;
+    width: 7%;
+}
+
+
+
+.valInput
+{
+    background-color:  blanchedalmond;
+    width: 30%;
+
+}
+
+.valInputCancel
+{
+    background-color:  blanchedalmond;
+    width: 40%;
+    margin-left: 3px;
+    margin-top: 3px;
+}
+
+.Input
+{
+    width:90%
+}
+
+
+.Header
+{
+    height: 10%;
+    text-align: center;
+}
+
+.showHedaerOption
+{
+    text-align: center;
+}
+
+.design_option
+{
+    padding: 4px;
+}
+
+.headerArea
+{
+    display: block;
+}
+
+h2{
+    position: static;
+    display: inline-flex;
+    text-align: center; 
+    padding: 0%;
+    left: 0%;
+    padding-right: 20px;
+  }
+
+  
+  
+
+
+.nameUser
+{
+    display: inline-flex;
+    float: left;
+    padding-top: 2%;
+     padding-left: 10px; 
+     padding-right: 0%;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+span
+{
+    padding:0%;
+    padding-right: 5px;
+}
+
+.input_TorqueVal
+{
+    background-color: white;
+}
+
+nav
+{
+    background-color: white;
+}
+.ToLogout
+{
+    float: right;
+    margin-top:1% ;
+    margin-right: 2%;  
+}
+
+.butheader:hover
+{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+
+
+
+.butheader
+{
+    font-size: large;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.menu
+{
+    padding: 4% 1% ;
+    height: 5%;
+    width: 100%;
+    text-align: center; 
+     box-sizing: border-box; 
+     background-color:lightgrey
+}
+
+.footer
+{
+    height: 7%;
+    text-align: center;
+    padding-top: 0.8%;
+}
+
+.mainHearderArea
+{
+    display: block;
+}
+
+.main
+{
+    width: 100%;
+    height: 62%;
+}
+
+.butelement
+{
+    padding: 4px;
+    margin-left: 12%;
+}
+
+
+#but
+{
+    font-weight: bold;
+    padding: 5px 9px;
+}
+
+.Img
+{
+    height: 55%;
+    overflow-y: none;
+}
+
+.MaimHeader
+{
+    text-align: center;
+}
+
+td
+{
+    background-color: white;
+}
+
+.footerbut
+{
+    margin-left: 5px;
+}
+
+#footerlink
+{
+    font-weight: bold;
+    font-size: large;
+}
+
+.Back
+{
+    margin-left: 4px;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.ToNext
+{
+    margin-left: 4px;
+    background-color: whitesmoke;
+    font-weight: bold;
+}
+
+.input_td
+{
+    background-color: lightblue;
+    border: none;
+    color: black;
+    padding-left: 0%;
+}
+
+.Imgdescripti12on
+{
+    height: 10%;
+    overflow-y: auto;
+    background-color: lightblue;
+}
+
+.spanImg
+{    
+    background-color: white;
+    font-weight: bold;
+}
+
+.but_tr
+{
+    padding-left: 0%;
+}
+
+.td_description
+{
+    height: 2%;
+    overflow-y: scroll;
+}
+
+.firstImg
+{
+    padding: 0%;
+    border: none;
+    background-color: lightblue;
+}
+
+
+
+.submit
+{
+   background-color:lightgrey;
+   font-size: large;
+   font-weight: bold;
+}
+
+.cancel
+{
+    background-color:lightgrey;
+    font-size: large;
+    font-weight: bold;
+}
+
+.edit
+{ 
+    background-color:lightgrey;
+    font-size: large;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.ShowTask
+{
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.Last_tr
+{
+    border: none;
+    background-color: lightblue;
+    position: sticky;
+    bottom: 0%;    
+}
+td,tr
+{
+    background-color: none;
+}
+
+.first_td
+{
+  border: none;
+  background-color: lightblue;  
+  padding: 0px;
+}
+
+.Last_td
+{
+  border: none;
+  background-color: lightblue;  
+  padding: 0px;
+  
+
+}
+
+.buttonlocation
+{
+    background-color: lightblue;
+}
+
+ @media only screen and (max-width:1500px) 
+{
+  .Container
+   {
+    width: 100%;
+    height: 100%;
+   }
+
+   .Header
+   {
+    height: 12%;
+   }
+    .ShowTask
+   {
+    padding-top: 3px;
+    padding-bottom: 3px;
+   }
+
+   .menu
+   {
+    padding: 4% 1% ;
+    height: 1%; 
+   }
+
+   
+
+    .main
+   {
+    /* display: inline-block; */
+    height: 56%;
+    display: inline-block;
+    /* overflow-y: auto; */
+    margin-left: 10%;
+
+    
+   }
+
+   thead
+   {
+    position: sticky;
+    top: 0%;
+   }
+   
+
+   table
+   {
+       display: inline-block;
+
+
+   }
+
+   tbody
+   {
+    overflow-y: auto;
+
+   }
+
+   .footer
+    {
+        display: block;
+        padding-top: 20px;
+        height: 3%;
+    }
+
+    img
+    {
+        height: 250px;
+    }
+
+    .Img
+    {
+        background-color: lightblue;
+    }
+} 
+

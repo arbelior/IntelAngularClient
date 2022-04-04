@@ -1,0 +1,301 @@
+
+.AllContent
+
+h2
+{
+    margin: 0;
+    padding: 10px 0;
+    text-decoration-line: underline;
+    color: black;
+    text-align: center;
+}
+
+
+.buttonWrapper
+{
+    text-align: center;
+}
+
+.Show
+{
+    padding-left: 7px;
+    font-weight: bold;
+}
+
+.active
+{
+    color: white;
+    font-weight: bold;
+}
+
+.ShowLinkActive:active
+{
+    color: white;
+    font-weight: bold;
+    
+}
+.menuItems{
+    padding:0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.menuItems li {
+    margin: 10px 30px;
+    list-style: none;
+}
+.menuItems li a {
+    background: gray;
+    color:white;
+    width:100%;
+    display: block;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.AlarmIf_UserIsActive
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lightgrey;
+    top: 4%;
+    left: 48%;
+    padding: 3px 5px;
+
+}
+
+
+.content
+{
+    height: 20%;
+}
+
+/* .All_divs
+{
+    height: 80%;
+} */
+
+.Accesss
+{
+    position: relative; 
+    /* margin-left: 2.7%; */
+    border: 1px solid black;
+    text-align: left;
+    font-size: 12px;
+    padding: 3px 3px;
+    width: 80%;
+    margin-left: 7%;
+    background-color: burlywood;
+     padding-right: 4px;
+     padding-left: 2px; 
+     height: 20%;
+}
+
+img
+{
+    position: absolute;
+    left:80%;
+}
+
+.userName
+{
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-left: 5px; 
+    padding-bottom: 5px;
+    height: 10px;
+}
+
+.userPass
+{
+    margin-top: 2px;
+    padding-top: 5px;
+     padding-right: 5px; 
+   padding-left: 5px; 
+   padding-bottom: 5px;
+   height: 10px;
+}
+
+
+.Uncorrect_pass
+{
+    font-size: smaller;
+}
+
+.Uncorrcect_user
+{
+
+    font-size: medium;
+    font-weight: bold;
+}
+
+.NoAccess
+{
+    font-size: smaller;
+
+}
+
+
+
+.cancel
+{
+    float: right;
+}
+
+.detailes
+{
+    font-size: smaller;
+}
+
+.Uncoreect_pass
+{
+    font-size: medium;
+    font-weight: bold;
+}
+
+.ForgetPass
+{
+    margin-top: 3%;
+}
+
+ .link
+{
+    box-sizing: border-box;
+    width: 80%;
+}
+
+ .checkBox
+{
+    margin-right: 38%;
+} 
+
+.Checkbox
+{
+    margin-top: 7px;
+}
+
+.AllData
+{
+   margin-right: 19px;
+}
+
+.ShiftData
+{
+    margin-right: 5px;
+}
+
+.point
+{
+    background-color: black;
+}
+
+.span
+{
+    margin-top: 20px;
+}
+
+.LoginOrCancel
+{
+    margin-top: 20px;
+}
+
+.UnAuthorized
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lightgrey;  
+     /* background-color:lightgreen; */
+    top: 8%;
+    left: 40%;
+    padding: 3px 5px;
+}
+
+.OkToUnAuthorized
+{
+    font-weight: bold;
+}
+
+
+ @media only screen and (max-width:1700px) 
+{
+
+ h2
+{
+  font-size: 20px;
+}
+
+.menuItems li a {
+padding: 3px;
+font-size: medium;
+}
+    .Accesss
+    {
+        font-size: small;
+        height: 5%;
+    }
+
+    .userName
+    {
+        height: -2%;
+        width: 91.5%;
+    }
+
+    .userPass
+    {
+        
+        height: -2%;
+        width: 91.5%;
+    }
+.ForgetPass
+{
+    font-size: small;
+    margin-top: 0px;
+}
+
+.menuItems li ul {
+    list-style: none;
+    padding: 0px;
+    font-size: small;
+}
+
+h2
+{
+padding-top: 3px;
+padding-bottom: 3px;
+}
+
+.LoginOrCancel
+{
+    margin-top: 5px;
+}
+
+.userName
+{
+    height: 5px;
+}
+.userPass
+{
+    height: 5px;
+
+}
+
+.AllData
+{
+    font-size: small;
+}
+
+.ShiftData
+{
+    font-size: small;
+}
+
+
+
+
+} 

@@ -1,0 +1,205 @@
+.Container
+{
+    height: 100%;
+    width: 100%
+}
+.Header
+{
+    display: block; 
+    width: 100%;
+    height: 20%;
+}
+.main
+{
+    display: inline-block;
+    width: 100%;
+    height: 60%;
+}
+
+.ShowMessage 
+{
+     display: inline-block;
+     height: 85%;
+     width: 80%;
+     overflow-y: auto;  
+
+}
+
+.thstuck
+{
+    position: sticky;
+    top: 0;
+}
+
+.Contact
+{
+   
+    background-color: burlywood; 
+    height: 85%;
+    width: 10%;
+    border: 1px solid black;
+    font-weight: bold;
+    float: left;
+    margin-left: 5px;
+ }
+
+ .td_con
+ {
+     text-align: center;
+ }
+
+ .In_Contact
+ {
+     border: none;
+     padding-top: 2px;
+     width: 70%;
+ }
+
+.SendMessageArea
+{
+    position: absolute; 
+    display: block;
+    height: 32%;
+    width: 100%;
+    top: 75%;
+    
+}
+
+.Showtyping
+{
+    position: absolute;
+    bottom: 97%;
+    margin-left: 2px;
+    color: red;
+}
+
+h3
+{
+    display: inline-flex;
+    margin-left: 3%;
+    font-size: large;
+}
+
+h2
+{
+    display: inline-flex;
+    top: 0%;
+    position: absolute;
+    right: 45%;
+}
+
+
+.logout
+{
+     display: inline-flex;
+     font-size: large;
+     font-weight: bold;
+     /* padding: 3px; */
+     float: right;
+     margin-right: 3%;
+     margin-top: 1%;
+     border-radius: 10px;
+     padding: 5px;
+   
+}
+
+.logout:hover
+{
+    cursor: pointer;
+    background-color: lightgrey;
+}
+
+
+
+h3
+{
+    text-align: center;
+}
+
+.TextBox
+{
+    height: 60%;
+    width: 100%;
+}
+
+
+
+.textArea
+{
+    display: inline-flex;
+    width: 95%;
+    height: 63%; 
+    font-size: large;
+}
+
+.buttonelement
+{
+    
+    margin-left: 5px;
+    position: absolute;
+    bottom: 23%;
+     right: 2px; 
+    
+}
+
+button
+{
+    font-weight: bold;
+}
+
+table
+{
+    height:10%;
+    margin: auto;
+    font-style: normal;
+    font-size: medium;
+    margin-left: 13%;
+}
+
+tbody
+{
+    overflow-y: auto;
+}
+
+thead
+{
+    position: sticky;
+    position: static;
+}
+
+table,th,td
+{
+    font-style: normal; 
+    border: solid 1px white;
+}
+
+ thead
+{
+    position: static;
+    overflow-y: none;
+}
+
+td,th
+{
+    padding: 8px;
+    text-align: left;
+}
+
+tr :nth-of-type(odd)
+{
+   background-color: lightblue;
+   font-weight: bold;
+}
+
+td
+{
+    width: 200px;
+}
+
+tr :nth-of-type(even)
+{
+   background-color: lightblue;
+}
+
+
+

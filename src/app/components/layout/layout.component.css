@@ -1,0 +1,31 @@
+div{
+    height: 100%;
+     box-sizing: border-box; 
+     display: grid; 
+    grid-template-rows: 15% 80% 5%;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+div , div > * {
+    border: 1px solid black;
+}
+.main{
+    position: relative;
+}
+
+header, footer{
+    grid-column: span 12;
+}
+
+aside{
+    grid-column: span 2;
+}
+
+main{
+    grid-column: span 10;
+
+}
+
+
+
+

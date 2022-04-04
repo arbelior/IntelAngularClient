@@ -1,0 +1,36 @@
+<div class="All">
+<h2>Register New User</h2>
+<br>
+
+<form #FormInfo="ngForm">
+    <input type="text" placeholder="First Name..." class="name" name="name" [(ngModel)]="addUser.first_name"
+    required #nameInfotask="ngModel">
+     <span *ngIf="nameInfotask.invalid &&  nameInfotask.touched">Missing First Name...</span>
+    <br><br>
+    <input type="text" placeholder="Last Name..." class="buddy" name="LasrName" [(ngModel)]="addUser.last_name"
+    required #LastnameInfo="ngModel">
+     <span *ngIf="LastnameInfo.invalid && LastnameInfo.touched">Missing Last Name...</span>
+    <br><br>    
+    <input type="text" placeholder="User Name..." class="task" name="UserName" [(ngModel)]="addUser.user_name"
+    required #UserNameInfo="ngModel">
+     <span *ngIf="UserNameInfo.invalid && UserNameInfo.touched">Missing User Name</span>
+    <br><br>
+    <input type="text" placeholder="Pass..." class="task" name="pass" [(ngModel)]="addUser.pass"
+    required #UserPass="ngModel">
+     <span *ngIf="UserPass.invalid && UserPass.touched">Missing Password</span>
+    <br><br>  
+    <input type="text" placeholder="Admin | User"  class="task" name="role" [(ngModel)]="addUser.role"
+    required #RoleInfo="ngModel">
+     <span *ngIf="RoleInfo.invalid && RoleInfo.touched">Missing Role User | Admin</span>
+    <br><br>
+    <input class="command" type="text" placeholder="MS | ENG | GL | POC | PT" class="task" name="command" [(ngModel)]="addUser._command"
+    required #CommandInfo="ngModel">
+     <span *ngIf="CommandInfo.invalid && CommandInfo.touched">Missing Command MS | ENG | GL | POC | PT</span>
+    <br><br>
+    <a>
+    <button class="submit" [disabled]="FormInfo.form.invalid" (click)="SaveNewUser()">Submit</button>
+    </a>
+</form>
+</div>
+
+ 

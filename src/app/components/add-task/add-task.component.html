@@ -1,0 +1,37 @@
+ <div class="container">
+
+ <h2>Save Data for inspection</h2>
+<br>
+
+<form #FormInfo="ngForm">
+    <input type="text" placeholder="Name..." class="name" name="name" [(ngModel)]="SaveTask.techname"
+    required #nameInfotask="ngModel">
+     <span *ngIf="nameInfotask.invalid &&  nameInfotask.touched">Missing Name...</span>
+    <br><br>
+    <input type="text" placeholder="Buddy..." class="buddy" name="buddy" [(ngModel)]="SaveTask.buddy"
+    required #BuddyInfotask="ngModel">
+     <span *ngIf="BuddyInfotask.invalid && BuddyInfotask.touched">Missing Buddy Name...</span>
+    <br><br>
+     <label class="optional">
+            <select  aria-label="Shift..." class="select_shift" (click)="FunSelect($event)">
+            <option *ngIf="IsSelect">SHIFT 1</option>
+            <option *ngIf="IsSelect">SHIFT 2</option>
+            <option *ngIf="IsSelect">SHIFT 3</option>
+            <option *ngIf="IsSelect">SHIFT 4</option>
+        </select>
+    
+    </label>
+    
+    
+    <br><br>
+    <input type="text" placeholder="Tool , Task..." class="task" name="task" [(ngModel)]="SaveTask.task"
+    required #detailTask="ngModel">
+     <span *ngIf="detailTask.invalid && detailTask.touched">Missing Task detailes</span>
+    <br><br>
+    <a>
+    <button class="submit" [disabled]="FormInfo.form.invalid" (click)="SaveToTaskList()">Submit</button>
+    </a>
+</form>
+</div>
+
+ 

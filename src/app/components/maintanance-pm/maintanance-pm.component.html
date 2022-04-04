@@ -1,0 +1,180 @@
+<div class="Container">
+    <div class="Header">
+        <div class="headerArea">
+            <span *ngIf="IfLogin" class="nameUser"> Welcome {{ShowName}} </span>
+            <h2>Machine Maintanance</h2>
+            <span *ngIf="IfLogin" class="ToLogout"><input type="button"  (click)="LogoutFun()" value="LOGOUT" class="butheader"></span>
+        </div>
+        <div class="mainHearderArea"> 
+        <select  class="mod" class="design_option" (change)="SaveToolValue($event)">
+             <option selected disabled class="showHedaerOption">Select Tool</option>
+              <option *ngFor="let i of PcEmptyArray" [ngValue]="i" >{{i}}</option>
+          </select>
+        </div>
+    </div>
+    <div class="menu">
+        <input type="button" value="PMA" id="but" (click)="FunShowMainArea($event)">
+        <input type="button" value="PMB" class="butelement" id="but" (click)="FunShowMainArea($event)">
+        <input type="button" value="PMC" class="butelement" id="but" (click)="FunShowMainArea($event)">
+        <input type="button" value="PMD" class="butelement" id="but" (click)="FunShowMainArea($event)">
+        <input type="button" value="PME" class="butelement" id="but" (click)="FunShowMainArea($event)">
+        <input type="button" value="HLC" class="butelement" id="but" (click)="FunShowMainArea($event)"><br>
+       
+    </div>
+    <div class="ShowTask">{{showTask}}</div>
+    <div *ngIf="IfSelect_Task" class="main">
+        <div class="MaimHeader">
+            <div *ngIf="If_Task_Selct">            
+            <div *ngIf="preperation_choice" >
+                <table >
+                    <tr class="firstImg">
+                        <td class="firstImg">
+                            <img *ngIf="IfRegularPc" src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/PM's Preparations/{{Select_Preperation_Picture}}.jpg" width="300" height="270" class="icon">
+                        </td>
+                        <td class="firstImg">
+                            <img *ngIf="IfAshPc" src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/PM's Preparations/{{Select_Preperation_Picture}}.jpg" width="300" height="270" class="icon">
+                        </td>
+                    </tr>
+
+                    <tr class="Imgdescripti12on">
+                        <td>
+                                <span *ngFor="let i of Show_Images_detailes" class="spanImg">{{i.description}}</span>
+                        </td>
+                    </tr>
+                   <tr class="but_tr">
+                    <td class="input_td">
+                    <input type="button" value="NEXT" (click)="NextImage()"  class="ToNext">
+                    <input type="button" value="BACK" class="Back" (click)="BackImage()">
+                    <input type="button" value="CANCEL" (click)="Tocancel()" class="Back">
+                    </td>
+                  </tr>
+                </table>               
+            </div>
+            <div *ngIf="IfAskTorqueCheck" class="divTable">
+                    <table>
+                        <thead>
+                            <th>Module</th>
+                            <th>PM</th>
+                            <th>Chambar Area</th>
+                            <th>Part</th>
+                            <th>Torque</th>
+                            <th>Spec Route</th>
+                            <th>Select</th>
+                        </thead>
+                        <tbody>
+                            <tr *ngFor="let i of TorqueListArrayAPerTask">
+                                <td>{{i.module}}</td>
+                                <td>{{i.pm}}</td>
+                                <td>{{i.chambar}}</td>
+                                <td>{{i.part}}</td>
+                                <td>
+                                  <input *ngIf="i.select" class="input_TorqueVal" type="text" value="{{i.torque}}" (change)="UpdateTorqueInArray($event, i.part)"> 
+                                   <nav *ngIf="i.ShowTorqueDB">{{i.torque}}</nav>
+                                </td>
+                                <td>{{i.route}}</td>
+                                <td>
+                                    <input type="checkbox"
+                                    class="Checkbox"
+                                    [value]="i.part"
+                                    (change)="CheckBox($event)">
+                                </td>
+                            </tr>
+                            <tr class="Last_tr">
+                                <td class="first_td"><input [disabled]="IfAllTorqueCheck" type="button" value="Submit" class="submit" (click)="submit()"></td>
+                                <td class="Last_tr">                                  
+                                </td>     
+                                 <td class="Last_tr">                        
+                                </td>
+                                <td class="Last_tr"></td>
+                                <td class="Last_tr"></td>
+                                <td class="Last_tr"></td>
+                                <td class="Last_td">
+                                <div  class="buttonlocation">
+                                <input *ngIf="IfEditFunc()" type="button" value="Update" class="edit" (click)="Update()">
+                                <input type="button" value="Cancel" class="cancel" (click)="CloseTorqueList()">
+                                </div>
+                                </td>
+                            </tr>
+                            <tr class="Last_tr">
+                                <td class="first_td">
+                                    <input *ngIf="selectSubmit" type="text" placeholder="Insert Buddy Name...." class="submit"[(ngModel)]="buddy" (input)="CheckIf_InsertBuddy($event)">
+                                </td>                                
+                                <td class="first_td">
+                                    <input  *ngIf="selectSubmit" [disabled]="IfInsertBuddy" type="button" value="OK" class="submit" (click)="SaveTorqueCheck_Task()">
+                                </td>
+                                <td class="Last_tr"></td>
+                                <td class="Last_tr" ></td>
+                                <td class="Last_tr"></td>
+                                <td class="Last_tr"></td>
+                            </tr>
+                            </tbody>
+                    </table>         
+            </div>
+            
+          
+
+           
+            <div *ngIf="disassembly_choice" class="Img">
+                <table>
+                    <tbody>
+                    <tr class="firstImg">
+                        <td class="firstImg">
+                            <img *ngIf="IfRegularPc"  src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/DisAssemblyImages/{{Select_DisAssembly_Picture}}.jpg" width="300" height="270" class="icon">
+                        </td>
+                        <td class="firstImg">
+                            <img *ngIf="IfAshPc"  src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/DisAssemblyImages/{{Select_DisAssembly_Picture}}.jpg" width="300" height="270" class="icon">
+                        </td>
+                    </tr>
+                    <tr class="Imgdescripti12on">
+                        <td>
+                                <span *ngFor="let i of Show_Images_detailes" class="spanImg">{{i.description}}</span>
+                        </td>      
+                    </tr>
+                    <tr class="but_tr">
+                        <td class="input_td">
+                        <input type="button" value="NEXT" (click)="NextImage()"  class="ToNext">
+                        <input type="button" value="BACK" class="Back" (click)="BackImage()">
+                        <input type="button" value="CANCEL" (click)="Tocancel()" class="Back">
+                        </td>
+                    </tr>
+                </tbody>
+                </table>                                            
+            </div>
+
+            <div *ngIf="Assembly_choice" class="Img">
+                <table class="t1">
+                    <tbody>
+                    <tr class="firstImg">
+                        <td class="firstImg">
+                            <img *ngIf="IfRegularPc" src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/AssemblyImages/{{Select_Assembly_Picture}}.jpg" width="300" height="270" class="icon">
+                         </td>
+                        <td class="firstImg">
+                            <img *ngIf="IfAshPc" src="/assets/Maintanance_Images/{{ShowModuleChoice}}/{{Select_Task}}_Images/AssemblyImages/{{Select_Assembly_Picture}}.jpg" width="300" height="270" class="icon">
+                        </td>
+                    </tr>
+                    <tr class="Imgdescripti12on">
+                        <td class="td_description">
+                            <span *ngFor="let i of Show_Images_detailes"  class="spanImg">{{i.description}} {{i.torque}}</span>
+                        </td>
+                    </tr>
+                       <tr class="but_tr">
+                        <td class="input_td">
+                        <input type="button" value="NEXT" (click)="NextImage()"  class="ToNext">
+                        <input type="button" value="BACK" class="Back" (click)="BackImage()">
+                        <input type="button" value="CANCEL" (click)="Tocancel()" class="Back">
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+                </div>
+        </div>
+        </div>
+    </div>
+    <div *ngIf="IfTask_define"  class="footer">
+            <input type="button" value="PM's Preparations" id="footerlink" (click)="StartPmPreperationFun()" >
+            <input type="button" value="Disassembly" class="footerbut" id="footerlink" (click)="StartdisAssembly_pmFun()">
+            <input type="button" value="Assembly" class="footerbut" id="footerlink" (click)="Assembly_pmFun()">
+            <input type="button" *ngIf="IfUseTorque" value="Torque Values" class="footerbut" id="footerlink" (click)="Torque()">
+    </div>
+
+</div>

@@ -1,0 +1,213 @@
+.Container
+{
+    height: 100%;
+}
+
+.table
+{
+    height: 62%;
+    overflow-y: auto;
+}
+
+
+
+
+
+h2
+{
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+.AC
+{
+    width: 90%;
+    height: 17px;
+    font-weight: bold;
+}
+
+.AcResult
+{
+    width:150px ;
+}
+
+.status
+{
+    width: 200px;
+    text-transform: capitalize;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+
+.content
+{
+    height: 15%;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+
+.buttons
+{
+    width: 100%;
+    position: absolute; 
+    bottom: 0%; 
+    display: block;
+    padding: 1px; 
+    /* height: 5%; */
+}
+
+.back_button
+{
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+}
+
+.FILTER
+{
+     font-size:medium;
+     padding-left: 5px;
+     padding-right: 5px; 
+}
+
+.SAVE
+{
+    padding-left: 5px;
+    padding-right: 5px; 
+    font-size: medium;
+     margin-left: 2px; 
+}
+
+.Back
+{
+ 
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+    font-size:medium;
+}
+
+span
+{
+    font-size: small;
+}
+
+.but_dev
+{
+    text-align: center;
+    font-weight: bold;
+    background-color:lightblue;
+    margin-bottom: 2px;
+    margin-top: 4px;
+    font-size: small;
+}
+
+.deviaition
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 5px;
+    top: -5%;
+    left: 20%;
+}
+
+
+
+.IfPass
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: lightgrey;
+    top: -5%;
+    left: 37%;
+    padding: 3px 5px;
+   
+}
+
+.tool
+{
+    width: 6.2%;
+    margin-left: 4px;
+    font-size: larger;
+    padding: 2px 3px 2px; 
+    text-align: center;
+    background: gray;
+    color:white;
+    border: solid 1px grey;   
+}
+
+.tool:hover
+{
+    font-weight: bold;
+}
+
+p > .tool  :hover
+{
+    color: black;
+}
+
+.TaskProp
+{
+    margin-top: 2px;
+    margin-left: 8px;
+}
+
+.save
+{
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    background-color: burlywood;
+    padding: 2px 3px;
+    border: solid 1px black;
+    margin-left: 2px;
+    bottom: 2px; 
+}
+
+.IfOkToSave
+{
+    margin-top: 10px;
+    margin-left: 46px;
+}
+
+.IfCancel
+{
+    margin-left: 35%;
+}
+
+@media only screen and (min-width:1700px) 
+{
+    .buttons
+    {
+        margin-top: 4.05%;
+        padding: 2px;  
+
+    }
+
+    .deviaition{
+        left: 36%;
+    }
+
+    .save
+    {
+        margin-top: 29px;    
+        margin-left: -45px; 
+    }
+
+
+}
+
+
+

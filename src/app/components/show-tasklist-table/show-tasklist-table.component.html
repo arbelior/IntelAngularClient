@@ -1,0 +1,46 @@
+      <div class="container">
+
+      <h2 class="header">Welcome {{showName}}</h2>
+        <span><input type="button" value="LOGOUT" class="Button_To_Logout" (click)="Logout()"></span>
+<div>
+    <table>
+              
+      <thead>
+                   <th>Name</th>
+                   <th>Buddy</th>
+                   <th>Task</th>
+                   <th>Time</th>
+                   <th>Date</th>
+                   <th>Shift</th>
+                   <th>Delete</th>
+      </thead>
+           
+
+              <tbody>
+                  <tr *ngFor="let i of Datalist">
+            
+                      <td>{{i.techname}}</td>
+                      <td>{{i.buddy}}</td>
+                      <td>{{i.task}}</td>
+                      <td>
+                          {{i.time | time}}
+                      </td>
+                      <td>{{i.time | date : "dd/MM/yy"}}</td>
+                      <td>{{i.shift}}</td>
+                      <td>
+                         <img src="/assets/images/deletecircleicon.jpg" width="50" height="30" class="icon" (click)="deleteItem(i.id, i.techname)">
+                     </td>
+          
+                      
+                  </tr>
+              </tbody>
+              
+          
+          </table>
+        
+</div>  
+<div *ngIf="IfUnauthorized" class="UnAuthorized">
+    Sorry<br>
+    UnAuthorized! 
+    </div> 
+</div>

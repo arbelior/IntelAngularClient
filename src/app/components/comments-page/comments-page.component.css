@@ -1,0 +1,144 @@
+.container
+{
+    padding-left: 4px;
+}
+.Add_Comment
+{
+    height: 150px;
+    width: 460px;
+}
+
+.Verify Not Spam
+{
+    margin-top: 2000px;
+}
+
+p{
+    font-weight: bold;
+}
+
+.Container
+{
+    font-weight: bold;
+    /* text-align: center; */
+    margin-left: 2px;
+    margin-top: 50px;
+}
+
+h2{
+    text-align: center;
+}
+
+.cancelation
+{
+    margin-left: 50px;
+}
+
+.but
+{
+    font-weight: bold;
+
+}
+
+.but:hover
+{
+    cursor: pointer;
+}
+
+
+
+.butSend:valid
+{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.buttons
+{
+    position: absolute;
+    display: flex;
+    gap: 20px;
+    padding: 1px 1px;
+    bottom: 1px;
+    
+}
+
+label:hover
+{
+    color: red;
+}
+
+.wwid
+{
+    margin-left: 7px;
+}
+
+
+.WWid
+{
+    margin-left: 5px;
+}
+
+.reset
+{
+    color: red;
+}
+
+.reset:hover{
+    font-weight: bold;
+}
+
+.ShowMessageSend
+{
+    position: absolute;
+    border: solid black 1px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    background-color: #eee;
+    padding: 3px 5px;
+    top: -5%;
+    left: 32%; 
+}
+
+.Ok
+{
+    font-weight: bold;
+    font-size: small;
+     background-color: lightblue;  
+    margin-top: 10px;
+    color: white;
+
+}
+
+@media only screen and (min-width:1700px) 
+{
+   .but
+   {
+       font-size: large;
+   }
+
+   .butSend
+{
+     font-size: large; 
+}
+
+   .Container
+   {
+       font-size: large;
+   }
+
+   .Add_Comment
+   {
+       height: 280px;
+   }
+   .buttons{
+       margin-top: 33px;
+   }
+   .reset
+   {
+    font-size: large;
+   }
+}
+
+
